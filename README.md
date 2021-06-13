@@ -1,4 +1,4 @@
 # classic-encipher
-# include:
-# Additive
-# Multiplication
+include:
+ Additive
+ Multiplication
