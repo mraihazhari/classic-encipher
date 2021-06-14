@@ -1,4 +1,2 @@
 # classic-encipher
-include:
- Additive
- Multiplication
+Made for learning purposes only.
