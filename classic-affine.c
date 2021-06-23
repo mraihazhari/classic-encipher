@@ -25,7 +25,7 @@ int main(){
 	printf("\nAffine encrypted: ");
 	print(str,strLength);
 	i=0;
-	multDec=extended_gcd(11,256,&x,&y); //taking Bézout coefficients
+	multDec=extended_gcd(11,256,&x,&y); //taking BÃ©zout coefficients
 	while(i != strLength){ //Affine decipher
 		if (flag[i]==1){
 			str[i]-=31;
@@ -38,8 +38,8 @@ int main(){
 	print(str,strLength);
 	return 0;
 }
-int extended_gcd(int a, int b, int *x, int *y){ //Extended GCD (greatest common divisor) using euler theorem with Bézout coefficients
-    if (a == 0){                                //Bézout coefficients: ax + by = multDec (multDec is the gcd result)
+int extended_gcd(int a, int b, int *x, int *y){ //Extended GCD (greatest common divisor) using euler theorem with BÃ©zout coefficients
+    if (a == 0){                                //BÃ©zout coefficients: ax + by = multDec (multDec is the gcd result)
         *x = 0;									//x can be used for inverse multiplication if multDec is 1.
         *y = 1;
         return b;
@@ -48,6 +48,7 @@ int extended_gcd(int a, int b, int *x, int *y){ //Extended GCD (greatest common 
     int gcd = extended_gcd(b % a, a, &_x, &_y); //Recursively
     *x = _y - (b/a) * _x;
     *y = _x;
+	printf("Hallo Azhari disini");
     return gcd;
 }
 int mod(int a,int b){ //function for modulo, since C can't moduled negative numbers
